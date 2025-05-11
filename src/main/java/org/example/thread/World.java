@@ -5,10 +5,13 @@ public class World extends  Thread{
     public void run() {
         System.out.println("RUNNABLE");
 
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            System.out.println(e);
+        for (int i = 0; i <= 6; i++) {
+            System.out.println(i);
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                System.out.println(e);
+            }
         }
     }
 
@@ -22,4 +25,6 @@ public class World extends  Thread{
         world.join();
         System.out.println(world.getState());
     }
+
+
 }
