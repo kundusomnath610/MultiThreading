@@ -19,5 +19,7 @@ public class World extends  Thread{
         System.out.println(world.getState());
         world.sleep(200);
         System.out.println(world.getState());
+        world.join();
+        System.out.println(world.getState());
     }
 }
